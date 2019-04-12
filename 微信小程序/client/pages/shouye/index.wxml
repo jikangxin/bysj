@@ -1,0 +1,64 @@
+
+<view class='a' wx:if="{{you}}">
+  <view class='a1'>
+    <view class='a11'> 我的课程</view>
+    <van-button class='a12' round type="primary" round='true' size="small" >+添加课程 &emsp;</van-button>
+  </view>
+  <view class='a2'>
+  <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" >
+                <view id="demo1" class="scroll-view-item_H" style="flex-direction:row;">
+                
+                  <view class='b2a' wx:for="{{sr}}">
+                    <!-- <navigator url="../teacher/index?id={{item.id}}" > -->
+                        <view class='b2a1'>
+                          <image class='sr1' src="{{item.image}}"/>
+                          <view class='b2a2'>{{item.t}}</view>
+                        </view>
+                      <!-- </navigator> -->
+                  </view>
+                </view>
+  </scroll-view>
+  </view>
+  <view class='a3'>查看全部</view>
+</view>
+<view class='ab' wx:if="{{meiyou}}"> 
+  
+    <view class='ab11'>我的课程</view>
+    <view class='ab12'>
+      <image  src='../../image/aa3.jpg'/> 
+    </view>
+    <van-button class='ab13' round type="default" round='true' size="small" >+添加课程 </van-button>
+    <view class='ab14'>你还没有参加训练，马上选择适合自己的课程</view>
+</view>
+<!-- 推荐课程 -->
+<view class='b'>
+  <view class='b1'>
+    <view class='b11'>推荐课程</view>
+   </view>
+  <view class='b2'> 
+
+  <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" >
+                <view id="demo1" class="scroll-view-item_H" style="flex-direction:row;">
+                
+                  <view class='b2a' wx:for="{{sr}}" wx:key="key">
+                    <!-- <navigator url="../teacher/index?id={{item.id}}" > -->
+                        <view class='b2a1'>
+                          <image class='sr1' src="{{item.image}}"/>
+                          <view class='b2a2'>{{item.t}}</view>
+                        </view>
+                      <!-- </navigator> -->
+                  </view>
+                </view>
+  </scroll-view>
+  </view>
+</view>
+<!-- 热门活动 -->
+<view class='c'>
+  <view class='c1'>
+  健身知识
+  </view>
+  <view class='c2' wx:for="{{zs}}" wx:key="key" >
+   <image class='c21' src="{{item.image}}"/>
+   <view class='c22'>{{item.t}}</view>
+  </view>
+</view>

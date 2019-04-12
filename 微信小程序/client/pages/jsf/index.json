@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "预约健身房",
+  "usingComponents": {
+    "van-rate": "../../vant/dist/rate/index",
+    "van-popup": "../../vant/dist/popup/index",
+    "van-tab": "../../vant/dist/tab/index",
+    "van-tabs": "../../vant/dist/tabs/index",
+    "van-button": "../../vant/dist/button/index"
+  }
+}

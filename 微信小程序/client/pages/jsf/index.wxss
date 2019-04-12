@@ -1,0 +1,153 @@
+/* client/pages/jsf/index.wxss */
+.za{
+  width: 100%;
+  height: 300rpx;
+
+}
+.za swiper-item{
+ 
+}
+.za swiper-item  image{
+  width: 100%;
+  height: 100%;
+
+}
+.zb1{
+ border-bottom-width:thin;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(206, 196, 216)
+}
+.zb{
+  width: 100%;
+  height: 50rpx;
+    margin-left:5%;
+    margin-top:20rpx;
+    font-weight: bold;
+}
+.zc{
+   width: 100%;
+  height: 50rpx;
+  margin-left:5%;
+  margin-top:10rpx;
+  margin-bottom: 20rpx;
+   
+}
+.zd{
+  width: 100%;
+  height: 80rpx;
+   font-size:0.8rem;
+   
+    display: flex;
+  justify-content: center;
+  align-items: center;
+   border-bottom-width:thin;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(206, 196, 216)
+}
+.ze{
+  width: 100%;
+  height: 100rpx;
+   font-size:0.7rem;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+   border-bottom-width:thin;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(206, 196, 216)
+}
+.ze0{
+  width: 15%;
+  height: 100%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ze0 image{
+  height: 60%;
+  width: 50%;
+}
+.ze1{
+  width: 70%;
+  
+  float: left;
+}
+.ze2{
+  height: 100%;
+  width: 15%;
+  float: left;
+
+}
+.ze22{
+  height: 100%;
+  width: 100%;
+}
+.ze221{
+  height: 80%;
+  width: 80%;
+}
+.ze21{
+  height: 100%;
+  width: 100%;
+}
+.zf{
+    height: 60rpx;
+  width: 100%;
+  border-bottom-width:thin;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(206, 196, 216);
+}
+.zf1{
+  margin-top: 10rpx;
+  margin-left: 5%;
+  font-size:0.8rem;
+}
+.sb{
+  height: 220rpx;
+  width: 100%;
+   margin-bottom: 20rpx;
+}
+.sb1{
+  width: 35%;
+  height: 100%;
+  float: left;
+}
+.sb1 image{
+  height: 100%;
+  width: 100%;
+}
+.sb2{
+  margin-left:5%;
+  width: 60%;
+  height: 100%;
+  float: left;
+}
+.sb21{
+  height: 30%;
+  width: 100%;
+
+  font-size:0.8rem;
+  font-weight: bold;
+}
+.sb22{
+  font-size:0.6rem;
+  height: 30%;
+  width: 100%;
+
+}
+.sb23{
+  height: 40%;
+  width: 50%;
+  font-size:0.7rem;
+  color: rgb(67, 184, 67);
+  float: left;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sb24{
+
+  width: 50%;
+  height: 40%;
+  float: left;
+}

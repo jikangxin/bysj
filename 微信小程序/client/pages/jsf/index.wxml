@@ -1,0 +1,67 @@
+ <swiper class='za' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"
+    duration="{{duration}}"
+     circular="{{ circular}}"
+    >
+      <block wx:for="{{imgUrls}}" wx:key="key">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150" />
+        </swiper-item>
+      </block>
+</swiper>
+<view class='zb1'>
+    <view class='zb'>
+        <view>铸美健身工作室</view>
+    </view>
+    <view  class='zc'>
+        <van-rate class='yyb22' disabled disabled-color="rgb(228, 147, 81)" value="{{ value }}"  
+                    bind:change="onChangexinxin"/>
+    </view>
+</view>
+<view class='zd'>
+    <view>营业时间：周一至周日 09:00-20:30</view>
+</view>
+<view class='ze'>
+    <view class='ze0'>
+      <image src='../../image/dingwei.jpg'></image>
+    </view>
+    <view class='ze1' bindtap='dizhi'>裕华区槐安路与育才街交叉口怀特装饰城三楼3009</view>
+    <view class='ze2'>
+       
+       <image class='ze221' src='../../image/dianhua.jpg'>
+       <picker class='ze22' bindchange="bindPickerChange" value="{{index}}" range="{{arraydianhua}}">
+       </picker>
+       </image>
+       
+      
+    </view>
+</view>
+<view class='zf'>
+    <view class='zf1'>预约设备</view>
+</view>
+<!-- <van-tabs active="{{ active }}">
+  <van-tab title="龙门架">
+    <view >
+
+    </view>
+  </van-tab>
+  <van-tab title="跑步机">内容 2</van-tab>
+  <van-tab title="椭圆机"">内容 3</van-tab>
+  <van-tab title="推胸机">内容 4</van-tab>
+  <van-tab title="下拉机">内容 5</van-tab>
+  <van-tab title="仰卧板">内容 6</van-tab>
+</van-tabs> -->
+<view class='sb' wx:for="{{sb}}" wx:key="id">
+      <view class='sb1'>
+      <image src='{{item.img}}'></image>
+      </view>
+      <view class='sb2'>
+          <view class='sb21'>{{item.name}}</view>
+          <view class='sb22'>当前时间段：{{item.sj}}</view>
+          <view class='sb23'>空闲：{{item.kx}}</view>
+          <picker class='sb24' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                    <van-button type="primary" round="true">开始预约</van-button>
+          </picker>
+      
+      </view>
+      <van-popup wx:if="{{ists}}" wx:for="{{ts}}" wx:key="key" show="{{ show }}" bind:close="onClose">{您已成功预约了{item.shijian}}时间段训练</van-popup>
+</view>

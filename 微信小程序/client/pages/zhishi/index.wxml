@@ -1,0 +1,83 @@
+<van-tabs sticky>
+  <van-tab title="资讯">
+    <swiper class='za' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"
+    duration="{{duration}}"
+     circular="{{ circular}}"
+     next-margin="50rpx"
+     previous-margin="20rpx"
+    >
+      <block wx:for="{{imgUrls}}" wx:key="key">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='zb'></view>
+    <view class='zc'>
+      <view class='zc1'>
+        <view>每日话题</view>
+      </view>
+      <view class='zd'>
+        <view class='zd1' wx:for="{{mrht}}" wx:key="key">
+          <image src='{{item.image}}'></image>
+          <view class='zd2'>{{item.t}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='zb'></view>
+    <view class='ze'>
+      <view class='zc1'>健身知识 </view>
+      <view class='ze2' wx:for="{{jszs}}" wx:key="key">
+        <image src='{{item.image}}'></image>
+        <view class='ze21'>{{item.t}}</view>
+      </view>
+    </view>
+
+  </van-tab>
+  <van-tab title="预约">
+    <view class='yya'>
+        <view class='yya1'>
+          <view class='yya11'>综合</view>
+        </view>
+        <view class='yya1'>
+          <view class='yya11'>距离</view>
+        </view>
+        <view class='yya1'>
+          <view class='yya11'>好评</view>
+        </view>
+        <view class='yya1'>
+          <view class='yya11'>空闲</view>
+        </view>
+    </view>
+    <view class='yyb' wx:for="{{yuyue}}" wx:key="id" id="{{item.id}}" bindtap='jianshen'>
+        <view class='yyb1'> 
+          <image src='{{item.image}}'></image>
+        </view>
+        <view class='yyb2'>
+           <view class='yyb21'>{{item.name}}</view>
+           <view class='yybc'> 
+               <van-rate class='yyb22' disabled disabled-color="rgb(228, 147, 81)" value="{{ value }}"  
+                bind:change="onChangexinxin"/>
+                <view class='yyb23'>{{item.juli}}km</view>
+            </view>
+           
+            <view class='yyb24'>{{item.dizhi}} </view>
+            <view class='yyb25'>空闲设备：{{item.kx}} </view>
+         </view>
+        
+
+    </view>
+  </van-tab>
+  <van-tab title="动态">
+    <view class='d' wx:for="{{dt}}" wx:key="key">
+      <view class=''>
+        <image></image>
+        <view></view>
+
+      </view>
+      <image></image>
+      
+    </view>
+  </van-tab>
+
+</van-tabs>
