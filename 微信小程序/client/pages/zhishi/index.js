@@ -53,80 +53,117 @@ Page({
     dt:[
       {
         id:1,
-        name:'',
-        nameimg:'',
-        image:'',
-        zan:5,
-        text:''
+        name:'要毕业了',
+        nameimg:'../../image/a1.jpg',
+        image:'../../image/aa3.jpg',
+        zan:50,
+        text:'加油哦，要变得更强,掉收到后奇偶大祭司解耦'
       },
       {
         id: 1,
-        name: '',
-        nameimg: '',
-        image: '',
-        zan: 5,
-        text: ''
+        name: '要毕业了',
+        nameimg: '../../image/a1.jpg',
+        image: '../../image/aa3.jpg',
+        zan: 50,
+        text: '加油哦，要变得更强,掉收到后奇偶大祭司解耦'
       },
       {
         id: 1,
-        name: '',
-        nameimg: '',
-        image: '',
-        zan: 5,
-        text: ''
+        name: '要毕业了',
+        nameimg: '../../image/a1.jpg',
+        image: '../../image/aa3.jpg',
+        zan: 50,
+        text: '加油哦，要变得更强,掉收到后奇偶大祭司解耦'
       },
       {
         id: 1,
-        name: '',
-        nameimg: '',
-        image: '',
-        zan: 5,
-        text: ''
+        name: '要毕业了',
+        nameimg: '../../image/a1.jpg',
+        image: '../../image/aa3.jpg',
+        zan: 50,
+        text: '加油哦，要变得更强,掉收到后奇偶大祭司解耦'
+      },
+      {
+        id: 1,
+        name: '要毕业了',
+        nameimg: '../../image/a1.jpg',
+        image: '../../image/aa3.jpg',
+        zan: 50,
+        text: '加油哦，要变得更强,掉收到后奇偶大祭司解耦'
+      },
+      {
+        id: 1,
+        name: '要毕业了',
+        nameimg: '../../image/a1.jpg',
+        image: '../../image/aa3.jpg',
+        zan: 50,
+        text: '加油哦，要变得更强,掉收到后奇偶大祭司解耦'
+      },
+      {
+        id: 1,
+        name: '要毕业了',
+        nameimg: '../../image/a1.jpg',
+        image: '../../image/aa3.jpg',
+        zan: 50,
+        text: '加油哦，要变得更强,掉收到后奇偶大祭司解耦'
+      },
+      {
+        id: 1,
+        name: '要毕业了',
+        nameimg: '../../image/a1.jpg',
+        image: '../../image/aa3.jpg',
+        zan: 50,
+        text: '加油哦，要变得更强,掉收到后奇偶大祭司解耦'
       },
     ],
     yuyue:[
       {
         id:1,
-        image: 'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-        name:"健身私教工作室",
+        image: '../../image/js1.jpg',
+        name:"帕菲克健身私教工作室",
         juli:2.5,
-        dizhi:"万达广场南",
-        kx:26
+        value: 4,
+        dizhi:"河北科技大学",
+        kx:56
       },
       {
         id: 1,
-        image: 'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-        name: "健身私教工作室",
-        juli: 2.5,
+        image: '../../image/js2.jpg',
+        name: "亚太游泳馆",
+        juli: 3.5,
+        value: 3,
         dizhi: "万达广场南",
-        kx: 26
+        kx: 23
+      },
+      {
+        id: 1,
+        image: '../../image/sj3.jpg',
+        name: "哆来健身工作室",
+        juli: 1.6,
+        value: 5,
+        dizhi: "众美凤凰城",
+        kx: 134
+      },
+      {
+        id: 1,
+        image: '../../image/sj4.jpg',
+        name: "HELIALLSTAR全明星健身",
+        juli: 4.6,
+        dizhi: "谈固",
+        value: 4,
+        kx: 112
       },
       {
         id: 1,
         image: 'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
         name: "健身私教工作室",
         juli: 2.5,
-        dizhi: "万达广场南",
-        kx: 26
-      },
-      {
-        id: 1,
-        image: 'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-        name: "健身私教工作室",
-        juli: 2.5,
-        dizhi: "万达广场南",
-        kx: 26
-      },
-      {
-        id: 1,
-        image: 'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-        name: "健身私教工作室",
-        juli: 2.5,
+        value: 3,
         dizhi: "万达广场南",
         kx: 26
       },
     ],
-    value:3,
+    
   },
   onChange(event) {
     wx.showToast({
@@ -144,6 +181,18 @@ Page({
       url: "../jsf/index?id=" + e.currentTarget.id,
     })
     console.log(e.currentTarget.id)
+  },
+  dtxq:function(e){
+    wx.navigateTo({
+      url: "../dtxq/index?id=" + e.currentTarget.id,
+    })
+    console.log(e.currentTarget.id)
+  },
+  tianjia:function(e){
+    wx.navigateTo({
+      url: "../add/index",
+    })
+    console.log(e)
   },
   /**
    * 生命周期函数--监听页面加载

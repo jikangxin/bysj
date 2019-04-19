@@ -1,4 +1,4 @@
-<van-tabs sticky>
+  <van-tabs sticky>
   <van-tab title="资讯">
     <swiper class='za' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"
     duration="{{duration}}"
@@ -56,7 +56,7 @@
         <view class='yyb2'>
            <view class='yyb21'>{{item.name}}</view>
            <view class='yybc'> 
-               <van-rate class='yyb22' disabled disabled-color="rgb(228, 147, 81)" value="{{ value }}"  
+               <van-rate class='yyb22' disabled disabled-color="rgb(228, 147, 81)" value="{{item.value}}"  
                 bind:change="onChangexinxin"/>
                 <view class='yyb23'>{{item.juli}}km</view>
             </view>
@@ -69,14 +69,21 @@
     </view>
   </van-tab>
   <van-tab title="动态">
-    <view class='d' wx:for="{{dt}}" wx:key="key">
-      <view class=''>
-        <image></image>
-        <view></view>
-
+    <view class='tjia'>
+        <image src='../../image/tianjia.png' bindtap='tianjia'></image>
+    </view>
+    <view class='d' wx:for="{{dt}}" wx:key="key"  id="{{item.id}}" bindtap='dtxq'>
+      <image src='{{item.image}}'></image>
+      <view class='d1'>{{item.text}}</view>
+      <view class='d2'>
+          <image class='d21' src='{{item.nameimg}}'></image>
+          <view class='d22'>{{item.name}}</view>
+          <view class='d222'>
+                <image  src='../../image/11.png'></image>
+                <view class='d24'>{{item.zan}}</view>
+          </view>
+          
       </view>
-      <image></image>
-      
     </view>
   </van-tab>
 

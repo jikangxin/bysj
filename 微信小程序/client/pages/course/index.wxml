@@ -1,0 +1,64 @@
+<view class='a' wx:for="{{course_a}}" wx:key="id">
+    <image src='{{item.image}}'></image>
+    <view class='a1'>{{item.t1}}</view>
+    <view class='a2'>{{item.t2}}</view>
+</view>
+<view class='bff' wx:for="{{course_b}}" wx:key="key">
+    <view >{{item}}</view>
+</view>
+<view class='c'>
+     <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" >
+                <view id="demo1" class="scroll-view-item_H" style="flex-direction:row;">
+                
+                  <view class='b2a' wx:for="{{sr}}" wx:key="key">
+                    <!-- <navigator url="../teacher/index?id={{item.id}}" > -->
+                        <view class='b2a1'>
+                          <video
+                          class='video'
+                          src="{{item.video}}"
+                          controls="false"
+                          show-fullscreen-btn="true"
+                          show-center-play-btn="false"
+                          
+                          ></video>
+                          <view class='b2a2'>{{item.t}}</view>
+                        </view>
+                      <!-- </navigator> -->
+                  </view>
+                </view>
+  </scroll-view>
+</view>
+<view class='d'>
+    <view class='d1'>12332人已打卡</view>
+    <view class='d2' wx:for="{{image}}" wx:key="key">
+        <image src='{{item}}'></image>
+    </view>
+</view>
+<view class='zb'></view>
+<view class='b'>
+   <view class='b1'>
+        <view class='b11'>123 评论</view>
+        <view class='b12'>2340<image src='../../image/11.png'></image> </view>
+   </view>
+   <view class='b2'>
+        <image src='../../image/a3.jpg'></image>
+        
+            <input class='b21' type='text' confirm-type="send" placeholder="  发表评论"></input>
+        
+   </view>
+   <view class='b3' wx:for="{{pl}}" wx:key="id">
+        <view class='b31'>
+            <image src='{{item.nameimg}}'></image>
+            <view class='b311'>
+                <view class='b3111'>{{item.name}}</view>
+                <view class='b3112'>{{item.time}}</view>
+            </view>
+            <view class='b312'>
+                {{item.zan}}
+                <image src='../../image/11.png'></image>
+               
+            </view>
+        </view>
+        <view class='b32'>{{item.text}}</view>
+   </view>
+</view>

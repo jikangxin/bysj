@@ -25,7 +25,7 @@
   
     <view class='ab11'>我的课程</view>
     <view class='ab12'>
-      <image  src='../../image/aa3.jpg'/> 
+      <image  src='../../image/1c.jpg'/> 
     </view>
     <van-button class='ab13' round type="default" round='true' size="small" >+添加课程 </van-button>
     <view class='ab14'>你还没有参加训练，马上选择适合自己的课程</view>
@@ -37,19 +37,29 @@
    </view>
   <view class='b2'> 
 
-  <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" >
-                <view id="demo1" class="scroll-view-item_H" style="flex-direction:row;">
-                
-                  <view class='b2a' wx:for="{{sr}}" wx:key="key">
-                    <!-- <navigator url="../teacher/index?id={{item.id}}" > -->
-                        <view class='b2a1'>
-                          <image class='sr1' src="{{item.image}}"/>
-                          <view class='b2a2'>{{item.t}}</view>
-                        </view>
-                      <!-- </navigator> -->
+    <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" >
+                  <view id="demo1" class="scroll-view-item_H" style="flex-direction:row;">
+                  
+                    <view class='b2a' wx:for="{{sr}}" wx:key="key" bindtap='course'>
+                      <!-- <navigator url="../teacher/index?id={{item.id}}" > -->
+                          <view class='b2a1'>
+                            <image class='sr1' src="{{item.image}}"/>
+                            <view class='b2a2'>{{item.t}}</view>
+                          </view>
+                        <!-- </navigator> -->
+                    </view>
                   </view>
-                </view>
-  </scroll-view>
+    </scroll-view>
+  </view>
+  <view class='hhh' >
+    <form catchsubmit="formSubmit" catchreset="formReset" id="search-form">
+              <view class="search-pancel">
+                  <input value="" id="search-input" name="input" confirm-type="search" class="search-input"                         placeholder="搜索你感兴趣的内容..." bindconfirm="formSubmit"></input>
+                  <button class="search-button" form-type="submit" size="mini" plain="true">
+                      <icon type="search" color="#959595" size="12" />
+                  </button>
+              </view>
+      </form>
   </view>
 </view>
 <!-- 热门活动 -->
@@ -57,7 +67,7 @@
   <view class='c1'>
   健身知识
   </view>
-  <view class='c2' wx:for="{{zs}}" wx:key="key" >
+  <view class='c2' wx:for="{{zs}}" wx:key="key" bindtap='article'>
    <image class='c21' src="{{item.image}}"/>
    <view class='c22'>{{item.t}}</view>
   </view>

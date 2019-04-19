@@ -1,0 +1,39 @@
+<view class='a'>
+    <view class='a1'>
+        <image src='{{a.nameimg}}'></image>
+        <view class='a11'>{{a.name}}</view>
+    </view>
+    <view class='a2'>{{a.text}}</view>
+    <view class='a3' wx:for="{{a.image}}" wx:key="id">
+          <image src='{{item}}'></image>
+    </view>
+    <view class='a4'>{{a.time}}分享</view>
+</view>
+<view class='zb'></view>
+<view class='b'>
+   <view class='b1'>
+        <view class='b11'>{{a.pl}} 评论</view>
+        <view class='b12'>{{a.zan}} <image src='../../image/11.png'></image> </view>
+   </view>
+   <view class='b2'>
+        <image src='../../image/a3.jpg'></image>
+        
+            <input class='b21' type='text' confirm-type="send" placeholder="  发表评论"></input>
+        
+   </view>
+   <view class='b3' wx:for="{{pl}}" wx:key="id">
+        <view class='b31'>
+            <image src='{{item.nameimg}}'></image>
+            <view class='b311'>
+                <view class='b3111'>{{item.name}}</view>
+                <view class='b3112'>{{item.time}}</view>
+            </view>
+            <view class='b312'>
+                {{item.zan}}
+                <image src='../../image/11.png'></image>
+               
+            </view>
+        </view>
+        <view class='b32'>{{item.text}}</view>
+   </view>
+</view>

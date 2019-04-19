@@ -2,7 +2,7 @@
 
 <van-tabs active="{{ active }}" bind:change="onChange">
   <van-tab title="推荐课程">
-  <view class='a' wx:for="{{tj}}" wx:key='key'> 
+  <view class='a' wx:for="{{tj}}" wx:key='id' id="{{item.id}}" bindtap='course'> 
     
         <view  class='a1'>
         <image src="{{item.image}}"></image>
@@ -16,7 +16,7 @@
   </view>
   </van-tab>
   <van-tab title="专业课程">
-  <view class='a' wx:for="{{tj}}" wx:key='key'> 
+  <view class='a' wx:for="{{tj}}" wx:key='key' bindtap='course'> 
     
         <view  class='a1'>
         <image src="{{item.image}}"></image>
@@ -30,7 +30,7 @@
   </view>
   </van-tab>
   <van-tab title="器械训练">
-  <view class='d' wx:for="{{ts}}" wx:key='key'> 
+  <view class='d' wx:for="{{ts}}" wx:key='key' bindtap='course'> 
         <view  class='d1'>
         <image src="{{item.image}}"></image> 
         <view class='d11'>{{item.t}}</view>
@@ -39,7 +39,7 @@
   </view>
   </van-tab>
   <van-tab title="徒手训练">
-  <view class='d' wx:for="{{ts}}" wx:key='key'> 
+  <view class='d' wx:for="{{ts}}" wx:key='key' bindtap='course'> 
         <view  class='d1'>
         <image src="{{item.image}}"></image> 
         <view class='d11'>{{item.t}}</view>

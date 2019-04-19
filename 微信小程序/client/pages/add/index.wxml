@@ -1,0 +1,25 @@
+<view class="a">
+    <textarea class='a1' placeholder="分享新鲜事儿" maxlength='100' auto-focus="true" ></textarea>
+
+</view>
+<view class='b'>
+  <block wx:if="{{pictures.length == 0}}">
+      <image src='../../image/s31.png' class='b1' bindtap="uploadImg"></image>
+  </block>
+  <block wx:else>
+      <view class="gallery">
+      
+          <block wx:for="{{pictures}}" wx:for-item="picturesItem" wx:for-index="picturesIndex" wx:key="pictures">
+              <view class="gallery-item">
+                  <image class="gallery-item-cover" src="{{picturesItem}}" mode="aspectFill" data-index="{{picturesIndex}}" bindtap="previewImage"></image>
+                  
+              </view>
+          </block>
+           <block wx:if="{{pictures.length!=6}}">
+                  <image src='../../image/s31.png' class='b1' bindtap="uploadImg"></image>
+                  </block>
+      </view>
+      
+  </block>
+
+</view>

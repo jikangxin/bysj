@@ -5,10 +5,10 @@ Page({
     logged: false,
     looo: true,
     gridList: [
-      { enName: 'favorite', zhName: '收藏' },
+      { enName: 'favorite', zhName: '课程' },
       { enName: 'history', zhName: '浏览记录' },
-      { enName: 'shake', zhName: '视频' },
-      { enName: 'gallery', zhName: '相册' },
+      { enName: 'shake', zhName: '动态' },
+      { enName: 'gallery', zhName: '预约' },
       { enName: 'setting', zhName: '设置' }
     ],
     skin: ''

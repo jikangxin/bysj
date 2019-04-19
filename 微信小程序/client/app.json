@@ -6,7 +6,12 @@
     "pages/myself/index",
     "pages/skin/skin",
     "pages/jsf/index",
-    "pages/map/index"
+    "pages/map/index",
+    "pages/course/index",
+    "pages/article/index",
+    "pages/dtxq/index",
+    "pages/add/index",
+    "pages/gallery/gallery"
   ],
   "permission": {
     "scope.userLocation": {
