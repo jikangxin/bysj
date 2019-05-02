@@ -6,35 +6,59 @@ Page({
     looo: true,
     gridList: [
       { enName: 'favorite', zhName: '课程' },
-      { enName: 'history', zhName: '浏览记录' },
       { enName: 'shake', zhName: '动态' },
       { enName: 'gallery', zhName: '预约' },
-      { enName: 'setting', zhName: '设置' }
     ],
     skin: ''
   },
   onLoad: function (cb) {
     var that = this
+    
     wx.setNavigationBarTitle({
       title: wx.getStorageSync('mallName')
     })
     wx.login({
+      key:"userInfo",
+
       withCredentials: true,
       success: function (res) {
 
         console.log(res)
+     
         wx.getUserInfo({
-          success: function (res) {
-            console.log('bind')
-            console.log(res.userInfo)
+          success: function (es) {
+            app.globalData.nimage = es.userInfo.avatarUrl,
+            app.globalData.name = es.userInfo.nickName,
+
+              console.log(app.globalData.name)
             that.setData({
-              userInfo: res.userInfo,
+              userInfo: es.userInfo,
               logged: true,
               looo: false,
             })
+            wx.request({
+              url: 'http://127.0.0.1:8000/index.php/index/login',
+              data: {
+                code: res.code,
+                nameimg: es.userInfo.avatarUrl,
+                name: es.userInfo.nickName,
+                sex: es.userInfo.gender
+              },
+              header: {
+                "Content-Type": "application/x-www-form-urlencoded"
+              },
+              method: 'POST',
+              dataType: 'json',
+              responseType: 'text',
+              success: function (res) {
+                app.globalData.openid = res.data,
+                console.log(res.data)
+              },
 
+            })
           }
         })
+        
       }
     })
     typeof cb == 'function' && cb()

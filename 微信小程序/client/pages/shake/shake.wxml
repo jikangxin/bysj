@@ -1,0 +1,13 @@
+    <view class='d' wx:for="{{dt}}" wx:key="key"  id="{{item.id}}" bindtap='dtxq'>
+      <image src='{{item.image}}'></image>
+      <view class='d1'>{{item.text}}</view>
+      <view class='d2'>
+          <image class='d21' src='{{item.nameimg}}'></image>
+          <view class='d22'>{{item.name}}</view>
+          <view class='d222'>
+                <image  src='../../image/11.png'></image>
+                <view class='d24'>{{item.zan}}</view>
+          </view>
+          
+      </view>
+    </view>

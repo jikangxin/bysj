@@ -6,8 +6,8 @@ Page({
    */
   data: {
     
-    //you:true,
-    //meiyou:false,
+    // you:true,
+    // meiyou:false,
     meiyou:true,
     you:false,
     sr:[
@@ -65,6 +65,16 @@ Page({
     console.log(e.currentTarget.id)
     wx.navigateTo({
       url: '../article/index?aid=' + e.currentTarget.id,
+    })
+  },
+  aass:function(e){
+    console.log(11)
+    // this.setData({
+    //   meiyou:false,
+    //   you:true,
+    // })
+    wx.reLaunch({
+      url: '../index/index',
     })
   },
   /**

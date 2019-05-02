@@ -5,6 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    dj1:'rgb(233, 85, 85)',
+    dj2:'rgb(233, 218, 218)',
+    dj3:'rgb(233, 218, 218)',
+    dj4:'rgb(233, 218, 218)',
     active: 1,
     imgUrls: [
       'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
@@ -122,7 +126,7 @@ Page({
         image: '../../image/js1.jpg',
         name:"帕菲克健身私教工作室",
         juli:2.5,
-        value: 4,
+        value: 4.5,
         dizhi:"河北科技大学",
         kx:56
       },
@@ -164,6 +168,46 @@ Page({
       },
     ],
     
+  },
+  dainji1:function(e){
+    console.log(e.currentTarget.id)
+    if (e.currentTarget.id==1){
+      this.setData({
+        dj1: 'rgb(233, 85, 85)',
+        dj2: 'rgb(233, 218, 218)',
+        dj3: 'rgb(233, 218, 218)',
+        dj4: 'rgb(233, 218, 218)',
+      });
+      
+    }
+    if (e.currentTarget.id == 2) {
+      this.setData({
+        dj2: 'rgb(233, 85, 85)',
+        dj1: 'rgb(233, 218, 218)',
+        dj3: 'rgb(233, 218, 218)',
+        dj4: 'rgb(233, 218, 218)',
+      });
+    }
+    if (e.currentTarget.id == 3) {
+      this.setData({
+        dj3: 'rgb(233, 85, 85)',
+        dj2: 'rgb(233, 218, 218)',
+        dj1: 'rgb(233, 218, 218)',
+        dj4: 'rgb(233, 218, 218)',
+      });
+    }
+    if (e.currentTarget.id == 4) {
+      this.setData({
+        dj4: 'rgb(233, 85, 85)',
+        dj2: 'rgb(233, 218, 218)',
+        dj3: 'rgb(233, 218, 218)',
+        dj1: 'rgb(233, 218, 218)',
+      });
+    }
+    console.log(this.data.dj1)
+    console.log(this.data.dj2)
+    console.log(this.data.dj3)
+    console.log(this.data.dj4)
   },
   onChange(event) {
     wx.showToast({

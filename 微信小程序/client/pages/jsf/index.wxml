@@ -22,7 +22,7 @@
 </view>
 <view class='ze'>
     <view class='ze0'>
-      <image src='../../image/dingwei.jpg'></image>
+      <image src='../../image/dingwei.jpg' bindtap='dizhi'></image>
     </view>
     <view class='ze1' bindtap='dizhi'>裕华区槐安路与育才街交叉口怀特装饰城三楼3009</view>
     <view class='ze2'>
@@ -38,18 +38,7 @@
 <view class='zf'>
     <view class='zf1'>预约设备</view>
 </view>
-<!-- <van-tabs active="{{ active }}">
-  <van-tab title="龙门架">
-    <view >
 
-    </view>
-  </van-tab>
-  <van-tab title="跑步机">内容 2</van-tab>
-  <van-tab title="椭圆机"">内容 3</van-tab>
-  <van-tab title="推胸机">内容 4</van-tab>
-  <van-tab title="下拉机">内容 5</van-tab>
-  <van-tab title="仰卧板">内容 6</van-tab>
-</van-tabs> -->
 <view class='sb' wx:for="{{sb}}" wx:key="id">
       <view class='sb1'>
       <image src='{{item.img}}'></image>
@@ -63,5 +52,5 @@
           </picker>
       
       </view>
-      <van-popup wx:if="{{ists}}" wx:for="{{ts}}" wx:key="key" show="{{ show }}" bind:close="onClose">{您已成功预约了{item.shijian}}时间段训练</van-popup>
+      <van-popup overlay-style="background-color:rgb(103, 103, 105)" custom-style='width:60%; height:80rpx;font-size:0.6rem;display: flex;justify-content: center;align-items: center;'  show="{{show}}"  bind:close="onClose">{{shijianduan}}</van-popup>
 </view>

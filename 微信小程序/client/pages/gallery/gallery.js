@@ -1,53 +1,53 @@
 Page({
   data: {
-    pictures: [],
-    nullTip: {
-      tipText: '亲，没有上传照片哦',
-      actionText: '上传',
-      fn: 'uploadImg'
-    }
+    yuyue: [
+      {
+        id: 1,
+        image: '../../image/js1.jpg',
+        name: "帕菲克健身私教工作室",
+        juli: 2.5,
+        value: 4.5,
+        time: "17:00-18:00",
+        kx: 56
+      },
+      {
+        id: 1,
+        image: '../../image/js2.jpg',
+        name: "亚太游泳馆",
+        juli: 3.5,
+        value: 3,
+        time: "18:00-19:00",
+        kx: 23
+      },
+      {
+        id: 1,
+        image: '../../image/sj3.jpg',
+        name: "哆来健身工作室",
+        juli: 1.6,
+        value: 5,
+        time: "20:00-21:00",
+        kx: 134
+      },
+      {
+        id: 1,
+        image: '../../image/sj4.jpg',
+        name: "HELIALLSTAR全明星健身",
+        juli: 4.6,
+        time: "21:00-22:00",
+        value: 4,
+        kx: 112
+      },
+    ],
+
+  },
+  jianshen: function (e) {
+    wx.navigateTo({
+      url: "../jsf/index?id=" + e.currentTarget.id,
+    })
+    console.log(e.currentTarget.id)
   },
   onLoad: function (options) {
-    var that = this
-    wx.getStorage({
-      key: 'gallery',
-      success: function (res) {
-        that.setData({
-          pictures: res.data
-        })
-      }
-    })
+   
   },
-  uploadImg: function () {
-    var that = this
-    wx.chooseImage({
-      count: 1,
-      success: function (res) {
-        var tempFilePath = res.tempFilePaths[0]
-        wx.saveFile({
-          tempFilePath: tempFilePath,
-          success: function (res) {
-            var savedFilePath = res.savedFilePath
-            console.log(savedFilePath)
-            that.setData({
-              pictures: that.data.pictures.concat(savedFilePath)
-            })
-            wx.setStorage({
-              key: 'gallery',
-              data: that.data.pictures
-            })
-          }
-        })
-      }
-    })
-  },
-  previewImage: function (e) {
-    var data = e.currentTarget.dataset
-    var index = data.index
-    var that = this
-    wx.previewImage({
-      current: that.data.pictures[index], // 当前显示图片的链接，不填则默认为 urls 的第一张
-      urls: that.data.pictures
-    })
-  }
+ 
 })

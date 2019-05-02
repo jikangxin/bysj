@@ -1,0 +1,45 @@
+.a{
+  height: 230rpx;
+  width: 93%;
+
+  margin-left:3%;
+  margin-bottom:15rpx;
+  
+}
+.a1{
+  width: 100%;
+  height: 100%;
+
+}
+.a1 image{
+   width: 100%;
+  height: 100%;
+  border-radius:20rpx;
+}
+.a11{
+  color: white;
+  height: 60rpx;
+   width: 100%;
+  position: relative;
+  top: -160rpx;
+  left: 3%;
+  font-size:0.9rem;
+}
+.a12{
+  color: white;
+  height: 30rpx;
+   width: 100%;
+  position: relative;
+  top: -165rpx;
+  left: 3%;
+  font-size:0.55rem;
+}
+.a13{
+  color: white;
+  height: 50rpx;
+   width: 100%;
+  position: relative;
+  top: -160rpx;
+  left: 3%;
+  font-size:0.7rem;
+}

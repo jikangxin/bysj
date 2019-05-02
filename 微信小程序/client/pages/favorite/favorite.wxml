@@ -1,0 +1,12 @@
+ <view class='a' wx:for="{{tj}}" wx:key='id' id="{{item.id}}" bindtap='course'> 
+    
+        <view  class='a1'>
+        <image src="{{item.image}}"></image>
+    
+        
+        <view class='a11'>{{item.t1}}</view>
+        <view class='a12'>{{item.t2}}人已参加</view>
+        <view class='a13'>{{item.t3}}</view>
+         </view>
+    
+  </view>

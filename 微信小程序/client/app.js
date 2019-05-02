@@ -1,35 +1,56 @@
   //app.js
 var qcloud = require('./vendor/wafer2-client-sdk/index')
 var config = require('./config')
-
 App({
-    onLaunch: function () {
-        qcloud.setLoginUrl(config.service.loginUrl)
-    },
-  toLogin: function () {
-             // 前往授权登录界面
-            wx.navigateTo({
-               url: '/pages/myself/index',
-           })
-    
+  globalData: {  
+    openid:"",
+    nimage:'',
+    name:'',
   },
-       ready: function() {
-             return Promise((resolve, reject) => {
-                   const userkey = wx.getStorageSync('userkey')
-                   const userId = wx.getStorageSync('userId')
-                   const sessionData = wx.getStorageSync('sessionData')
-                   // 检查用户是否具有登陆态
-                  if (!userkey || !userId || !sessionData) {
-                        // 如果未登录就前往登录界面
-                        this.toLogin()
-        
-      } else {
-                        // 如果有就只要更改一下Promise，以继续执行后续操作
-                        resolve()
-        
-      }
-      
-    })
-    
-  }
+    onLaunch: function () {
+      qcloud.setLoginUrl(config.service.loginUrl)
+      wx.login({
+        key: "userInfo",
+
+        withCredentials: true,
+        success: function (res) {
+
+          console.log(res)
+
+          wx.getUserInfo({
+            success: function (es) {
+              console.log(es)
+              that.setData({
+                userInfo: es.userInfo,
+                logged: true,
+                looo: false,
+              })
+              wx.request({
+                url: 'http://127.0.0.1:8000/index.php/index/login',
+                data: {
+                  code: res.code,
+                  nameimg: es.userInfo.avatarUrl,
+                  name: es.userInfo.nickName,
+                  sex: es.userInfo.gender
+                },
+                header: {
+                  "Content-Type": "application/x-www-form-urlencoded"
+                },
+                method: 'POST',
+                dataType: 'json',
+                responseType: 'text',
+                success: function (res) {
+                  that.setData({
+                    sz: [] = res.data,
+                  })
+                  console.log(res.data)
+                },
+
+              })
+            }
+          })
+
+        }
+      })
+    },
 })

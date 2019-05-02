@@ -1,15 +1,16 @@
-<import src="../../utils/nullTip/nullTip.wxml"/>
-<block wx:if="{{pictures.length == 0}}">
-    <template is="nullTip" data="{{nullTip: nullTip}}"></template>
-</block>
-<block wx:else>
-    <view class="gallery">
-    
-        <block wx:for="{{pictures}}" wx:for-item="picturesItem" wx:for-index="picturesIndex" wx:key="pictures">
-            <view class="gallery-item">
-                <image class="gallery-item-cover" src="{{picturesItem}}" mode="aspectFill" data-index="{{picturesIndex}}" bindtap="previewImage"></image>
-            </view>
-        </block>
+<view class='yyb' wx:for="{{yuyue}}" wx:key="id" id="{{item.id}}" bindtap='jianshen'>
+        <view class='yyb1'> 
+          <image src='{{item.image}}'></image>
+        </view>
+        <view class='yyb2'>
+           <view class='yyb21'>{{item.name}}</view>
+           
+            <view class='yyb24'>{{item.time}} </view>
+            <view class='yyb25'>设备号：{{item.kx}} </view>
+             <view class='an' >
+             <button class='fabiao' bindtap="yy">取消预约</button>
+        </view>
+         </view>
+       
+
     </view>
-    <view bindtap="uploadImg" class="null-action">上传</view>
-</block>

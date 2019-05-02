@@ -5,8 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    wodepj:false,
+    fabiao:'',
+    kecheng:"收藏课程",
+    co:"white",
     course_a:[
       {
+        kid:1,
         image:"../../image/aa3.jpg",
         t1:"HIIt全身脂肪燃动-零基础",
         t2:"HIIT训练方式是非常有效的减脂方式，注意跟上每个节奏，准确的把握动作"
@@ -64,7 +69,73 @@ Page({
     ]
   
   },
+  bindButtonTap(e) {
+    this.setData({
+      fabiao: e.detail.value
+    })
+    console.log(e)
+  },
+  fabu:function(e){
+    this.data.fabiao
+    wx.request({
+      url: 'http://127.0.0.1:8000/index.php/index/pinglun',
+      
+    })
+  },
+  changecolor:function(e){
+    console.log(e.currentTarget)
 
+    if (this.data.co =='white'){
+      wx.request({
+        url: 'http://127.0.0.1:8000/index.php/index/shoucang',
+        data: {
+          kid: e.currentTarget.id,
+          is: 1,
+        },
+        header: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        method: 'POST',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) {
+          console.log(res.data)
+        },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+      this.setData({
+        co: 'red',
+        kecheng: "已收藏"
+      })
+      console.log(this.data.co)
+    }else{
+      wx.request({
+        url: 'http://127.0.0.1:8000/index.php/index/shoucang',
+        data: {
+          kid: e.currentTarget.id,
+          is: 0,
+        },
+        header: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        method: 'POST',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) { 
+          console.log(res.data)
+        },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+      this.setData({
+        co: 'white',
+        kecheng: "收藏课程"
+      })
+      console.log(this.data.co)
+    }
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */

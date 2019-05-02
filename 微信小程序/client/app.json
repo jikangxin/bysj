@@ -11,7 +11,10 @@
     "pages/article/index",
     "pages/dtxq/index",
     "pages/add/index",
-    "pages/gallery/gallery"
+    "pages/gallery/gallery",
+    "pages/gridList/gridList",
+    "pages/favorite/favorite",
+    "pages/shake/shake"
   ],
   "permission": {
     "scope.userLocation": {

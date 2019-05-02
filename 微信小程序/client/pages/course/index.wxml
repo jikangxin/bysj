@@ -1,6 +1,11 @@
 <view class='a' wx:for="{{course_a}}" wx:key="id">
     <image src='{{item.image}}'></image>
-    <view class='a1'>{{item.t1}}</view>
+    <view class='a1'>
+        <text class='a11'> {{item.t1}}</text>
+    </view>
+    <view class='a12' style='background:{{co}}' id="{{item.kid}}" bindtap='changecolor' >
+            {{kecheng}}
+        </view>
     <view class='a2'>{{item.t2}}</view>
 </view>
 <view class='bff' wx:for="{{course_b}}" wx:key="key">
@@ -43,8 +48,23 @@
    <view class='b2'>
         <image src='../../image/a3.jpg'></image>
         
-            <input class='b21' type='text' confirm-type="send" placeholder="  发表评论"></input>
-        
+            <input class='b21' bindinput="bindButtonTap"  type='text' focus="{{true}}"  confirm-type="send" placeholder="  发表评论"></input>
+        <button class='fabiao' bindtap="fabu">发表</button>
+   </view>
+   <view class='b3' wx:if="{{wodepj}}" wx:for="{{wo}}" wx:key="id" > 
+        <view class='b31'>
+            <image src='{{item.nameimg}}'></image>
+            <view class='b311'>
+                <view class='b3111'>{{item.name}}</view>
+                <view class='b3112'>{{item.time}}</view>
+            </view>
+            <view class='b312'>
+                0
+                <image src='../../image/11.png'></image>
+               
+            </view>
+        </view>
+        <view class='b32'>{{item.text}}</view>
    </view>
    <view class='b3' wx:for="{{pl}}" wx:key="id">
         <view class='b31'>

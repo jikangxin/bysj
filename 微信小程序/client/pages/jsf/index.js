@@ -65,7 +65,7 @@ Page({
     ],
     array: [
       "09:00-10:00  空闲:20",
-      "10:00-11:00  空闲:20",
+      "10:00-11:00  空闲:0",
       "11:00-12:00  空闲:20",
       "12:00-13:00  空闲:20",
       "13:00-14:00  空闲:20",
@@ -83,14 +83,14 @@ Page({
     ]
   },
   onClose() {
-    this.setData({ show: false});
+    this.setData({ show: false });
   },
   onChange(event) {
     wx.showToast({
       title: `切换到标签 ${event.detail.index + 1}`,
       icon: 'none'
     });
-  },
+  }, 
   dizhi:function(e){
     wx.navigateTo({
       url: "../map/index",
@@ -98,9 +98,40 @@ Page({
     console.log(e.currentTarget.id)
   },
   bindPickerChange: function (e) {
+    console.log(this.data.array[e.detail.value])
     console.log('picker发送选择改变，携带值为', e.detail.value)
+    console.log(this.data.array[e.detail.value].slice(16));
+    if (this.data.array[e.detail.value].slice(16)!=0){
+      this.setData({
+        show: true,
+        shijianduan: '您已成功预约了' + this.data.array[e.detail.value].slice(0,11)+'时间段训练'
+      })
+      wx.request({
+        url: 'http://127.0.0.1:8000/index.php/index/yuyue',
+        data: {
+          id: 8,
+          data: 11,
+        },
+        header: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        method: 'POST',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) {
+          console.log(res.data)
+        },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    }else{
+      this.setData({
+        show: true,
+        shijianduan: '抱歉该时间已无空闲设备'
+      })
+    }
     this.setData({
-      index: e.detail.value
+      index: e.detail.value,
     })
   },
   /**

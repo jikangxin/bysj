@@ -37,16 +37,16 @@
   <van-tab title="预约">
     <view class='yya'>
         <view class='yya1'>
-          <view class='yya11'>综合</view>
+          <view class='yya11'style='background:{{dj1}}' id="1" bindtap="dainji1">综合</view>
         </view>
         <view class='yya1'>
-          <view class='yya11'>距离</view>
+          <view class='yya11' style='background:{{dj2}}' id="2"  bindtap="dainji1">距离</view>
         </view>
         <view class='yya1'>
-          <view class='yya11'>好评</view>
+          <view class='yya11' style='background:{{dj3}}' id="3"  bindtap="dainji1">好评</view>
         </view>
         <view class='yya1'>
-          <view class='yya11'>空闲</view>
+          <view class='yya11' style='background:{{dj4}}' id="4"  bindtap="dainji1">空闲</view>
         </view>
     </view>
     <view class='yyb' wx:for="{{yuyue}}" wx:key="id" id="{{item.id}}" bindtap='jianshen'>

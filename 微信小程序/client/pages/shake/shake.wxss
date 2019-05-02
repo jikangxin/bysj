@@ -1,0 +1,62 @@
+.d{
+  width: 45.5%;
+  height: 480rpx;
+  margin-left:3%;
+   margin-bottom:10rpx;
+  float: left;
+  border-radius:8%;
+    background: rgb(231, 228, 235);
+}
+.d image{
+  width: 100%;
+  height: 70%;
+  border-radius:8%;
+
+}
+.d1{
+  width: 100%;
+  height: 15%;
+    font-size:0.7rem;
+     position: relative;
+  left: 5%;
+}
+.d2{
+  width: 100%;
+  height: 15%;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+   position: relative;
+  left: 5%;
+}
+.d2 image{
+  width: 16%;
+  border-radius:50%;
+  float: left;
+
+}
+.d22{
+  font-size:0.6rem;
+  float: left;
+  position: relative;
+  left: 5%;
+  width: 35%;
+}
+.d222{
+  float: left;
+  width: 45%;
+  height: 100%;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.d222 image{
+  width: 50%;
+  height: 100%;
+  border-radius:50%;
+  float: left;
+}
+.d24{
+  font-size:0.6rem;
+}

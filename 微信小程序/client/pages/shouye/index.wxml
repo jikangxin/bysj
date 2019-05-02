@@ -21,13 +21,16 @@
   </view>
   <view class='a3'>查看全部</view>
 </view>
-<view class='ab' wx:if="{{meiyou}}"> 
+<view class='ab' wx:if="{{meiyou}}" bindtap='aass'> 
   
     <view class='ab11'>我的课程</view>
     <view class='ab12'>
       <image  src='../../image/1c.jpg'/> 
     </view>
-    <van-button class='ab13' round type="default" round='true' size="small" >+添加课程 </van-button>
+
+    <view class='ab13' bindtap='aass'  >+添加课程 
+    </view>
+
     <view class='ab14'>你还没有参加训练，马上选择适合自己的课程</view>
 </view>
 <!-- 推荐课程 -->
